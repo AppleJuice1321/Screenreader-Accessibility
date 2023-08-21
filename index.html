@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Brians Ostebiks</title>
+</head>
+<body>
+	<!-- Der skal ikke stå div, men header -->
+	<header>
+		<a href="/">Brians Ostebiks</a>
+		<!-- Tilføjede 2 AJAX attributer, der forbedrer skærmlæseren -->
+		<input aria-controls="PrimaryNavigation" role="navigation" type="button" value="Menu">
+		<!-- her skal er stå nav og ikke div -->
+		<nav>
+			<!-- ul kan bruges, dog er menu mere semantisk -->
+			<menu>
+				<!-- Fuiyoh!!! -->
+				<li><a href="#!">Forside</a></li>
+				<li><a href="#!">Produkter</a></li>
+				<li><a href="#!">Historie</a></li>
+				<li><a href="#!">Kontakt</a></li>
+			</menu>
+		</nav>
+	</header>
+
+	<!-- Der skal ikke stå div, men main (content) -->
+	<main>
+		<h1>Brians Ostebiks</h1>
+		<p>Velkommen til min lille forretning. Her kan du købe alverdens oste til fornuftige priser. Jeg elsker ost, og derfor kan du være sikker på, at jeg kun har det allerbedste til dig.</p>
+		
+		<h2>Særlige tilbud</h2>
+
+		<!-- I stedet de 3 div'er, så kan der bruges sectioner til hver produkt-->
+		<section>
+			<!-- Der kan evt. bruges h1'er, da alle 3 producter er i individuelle sektioner -->
+			<h3>Ældgammel Rochefort</h3>
+			<!-- Der manglede et alt, hvilket er navnet på billdet -->
+			<!-- Brugte en ny placholder, den forrige blev ikke vist -->
+			<img src="https://placehold.co/600x400" alt="Ældgammel Rochefort">
+			<p>Denne Rochefort kan kravle hen ad køkkenbordet helt af sig selv.</p>
+			<!-- Her kan der bruges en span. Her vises prisen og har ikke noget at gøre med paragrapher -->
+			<span>Kr. 97,50</span>
+			<a href="#!/produkter/4432">Læs mere</a>
+		</section>
+		<section>
+			<h3>Mild Brie</h3>
+			<img src="https://placehold.co/600x400" alt="Mild Brie">
+			<p>Hvidskimmelosten alle elsker.</p>
+			<span>Kr. 43,95</span>
+			<a href="#!/produkter/43329">Læs mere</a>
+		</section>
+		<section>
+			<h3>Potkäse</h3>
+			<img src="https://placehold.co/600x400" alt="Potkäse">
+			<p>Min egen hjemmerørte potkäse.</p>
+			<span>Kr. 52,50</span>
+			<a href="#!/produkter/2342">Læs mere</a>
+		</section>
+	</main>
+
+	<!-- Footer bruges her i sted for div, her er der informationer og kontaktoplysninger om ejere og firmaet -->
+	<footer>
+		<!-- i sted for div og inde i et eller flere p tags, kan der bruges ul eller ol og lists -->
+		<!-- evt. lave endnu et tag rundt om, for at fortælle screenreaderen at dette er kontakt informationer -->
+		<section>
+			<!-- Tilføjede en rubrik -->
+			<h1>Kontakter</h1>
+			<!-- ul er okay at bruge her, det er ikke en navigationsbar, blot en liste af informationer -->
+			<ul>
+				<li>Brians Ostebiks</li>
+				<li>Camembert Boulevard 42</li>
+				<li>4242 Nørre Osteved</li>
+				<li>Tlf.: 1243 5687</li>
+				<li><a href="mailto:cheesylove@briansostebiks.dk">cheesylove@briansostebiks.dk</a></li>
+			</ul>
+		</section>
+
+		<!-- ændre diven til en section der har rollen: sociale medier -->
+		<section>
+			<h1>Find os her</h1>
+			<!-- ul er okay at bruge her, det er ikke en navigationsbar, blot en liste af informationer -->
+			<ul>
+				<li><a href="#!">Facebook</a></li>
+				<li><a href="#!">Instragram</a></li>
+				<li><a href="#!">Twitter</a></li>
+			</ul>
+		</section>
+		<!-- ændrede til en section, dette er meget vigtigt, copyright -->
+		<section>
+			<!-- "Alle rettigheder forbeholdes" Sådan skal det være! -->
+			Ophavsret &copy; 2018 Brians Ostebiks. Alle rettigheder forbeholdes.
+		</section>
+	</footer>
+</body>
+</html>
