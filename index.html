@@ -9,24 +9,33 @@
 <body>
 	<!-- Der skal ikke stå div, men header -->
 	<header>
-		<a href="/">Brians Ostebiks</a>
+		<!-- sidens titel -->
+		<a id="frontPage" href="/">Brians Ostebiks</a> <!-- (ACCESSEBILITY) -->
 		<!-- Tilføjede 2 AJAX attributer, der forbedrer skærmlæseren -->
-		<input aria-controls="PrimaryNavigation" role="navigation" type="button" value="Menu">
+		<input aria-controls="navigation" aria-describedby="buttonNav__message" type="button" value="Menu">
 		<!-- her skal er stå nav og ikke div -->
-		<nav>
+		<nav id="navigation" aria-hidden="true">
 			<!-- ul kan bruges, dog er menu mere semantisk -->
 			<menu>
 				<!-- Fuiyoh!!! -->
-				<li><a href="#!">Forside</a></li>
-				<li><a href="#!">Produkter</a></li>
+				<li><a aria-controls="frontPage" aria-describedby="frontPageLink__message" href="#!">Forside</a></li>
+				<li><a aria-controls="products" aria-describedby="productsLink__message" href="#!">Produkter</a></li>
 				<li><a href="#!">Historie</a></li>
-				<li><a href="#!">Kontakt</a></li>
+				<li><a aria-controls="contacts" aria-describedby="contactsLink__message" href="#!">Kontakt</a></li>
 			</menu>
 		</nav>
+
+		<!-- beskeder vises når betingelsen udøves (with screen reader) -->
+		<div hidden>
+			<span id="buttonNav__message">Klik her for at vise menuen</span>
+			<span id="frontPageLink__message">Klik her for at vise forsiden</span>
+			<span id="productsLink__message">Klik her for at se alle produkter</span>
+			<span id="contactsLink__message">Klik her for at se kontaktoplysninger</span>
+		</div>
 	</header>
 
 	<!-- Der skal ikke stå div, men main (content) -->
-	<main>
+	<main id="products"> <!-- (ACCESSEBILITY) -->
 		<h1>Brians Ostebiks</h1>
 		<p>Velkommen til min lille forretning. Her kan du købe alverdens oste til fornuftige priser. Jeg elsker ost, og derfor kan du være sikker på, at jeg kun har det allerbedste til dig.</p>
 		
@@ -66,7 +75,7 @@
 		<!-- evt. lave endnu et tag rundt om, for at fortælle screenreaderen at dette er kontakt informationer -->
 		<section>
 			<!-- Tilføjede en rubrik -->
-			<h1>Kontakter</h1>
+			<h1 id="contacts">Kontakter</h1> <!-- (ACCESSEBILITY) -->
 			<!-- ul er okay at bruge her, det er ikke en navigationsbar, blot en liste af informationer -->
 			<ul>
 				<li>Brians Ostebiks</li>
